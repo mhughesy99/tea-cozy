@@ -1,0 +1,210 @@
+/* CSS Structure:
+1. Global Styles
+2. Navigation Styles
+3. Hero Element Styles
+4. Tea Section Styles
+5. Location Section Styles
+6. Footer Section Styles
+
+/* 1 GLOBAL STYLES */
+*{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+
+main{
+    width: 100%;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+h4{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h5{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 2 NAVIGATION STYLES */
+header{
+    position: fixed;
+    border-bottom: 1px solid seashell;
+    width: 100%;
+    z-index: 10;
+}
+
+        /*navigation bar*/
+.nav-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 69px;
+}
+
+        /*top left logo*/
+.nav-logo{
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+}
+        /*navigation links*/
+.nav-link{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;   
+}
+
+        /*spacing for individual navigation links*/
+.nav-link li{
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+/* 3 HERO ELEMENT STYLES */
+        /* using banner as flex-container */
+.banner{
+    width: 1200px;
+    height: 700px;
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg?_gl=1*190gdoo*_gcl_aw*R0NMLjE3MTI0MjMzNTcuQ2owS0NRanc1Y093QmhDaUFSSXNBSjVuanVaaVVEYVdDaW9HZ0JTQVJkRVo1amV2MkhZY2NvbVpHSFdqeUxEcVF1Tmo3T3YwQlEybGNrMGFBZ1BQRUFMd193Y0I.*_gcl_dc*R0NMLjE3MTY5MDk2OTUuQ0pTVmlPRy1zSVlERmNCdVFRSWRmMklGc2c.*_gcl_au*MTYyOTkwMzcxOS4xNzE4NjkyODI4*_ga*ODAwNDk2NDkzNy4xNzExMTI5MjEy*_ga_3LRZM6TM9L*MTcxODY5NzMyOC4xNi4xLjE3MTg2OTczNDYuMC4wLjA.");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+        /* banner flex-container content text */
+.banner-text{
+    background-color: black;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+        /* spacing for heading */
+.banner-text h2{
+    margin-bottom: 10px;
+}
+
+/* 4 TEA SECTION STYLES */
+.monthly-tea{
+    margin-top: 20px;
+}
+
+        /* headers */
+.monthly-tea-header h3, .monthly-tea-header p{
+    margin-bottom: 15px;
+}
+
+        /* Below headings, make a flex-container for images */
+.monthly-tea-container{
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+        /* each image parameters */
+.item img{
+    height: 200px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+        /* image spacing */
+.item p{
+    margin-bottom: 10px;
+}
+
+/* 5 LOCATION SECTION STYLES */
+        /*set background image, make grid for header, location blocks and equal space at bottom */
+.locations{
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg?_gl=1*190gdoo*_gcl_aw*R0NMLjE3MTI0MjMzNTcuQ2owS0NRanc1Y093QmhDaUFSSXNBSjVuanVaaVVEYVdDaW9HZ0JTQVJkRVo1amV2MkhZY2NvbVpHSFdqeUxEcVF1Tmo3T3YwQlEybGNrMGFBZ1BQRUFMd193Y0I.*_gcl_dc*R0NMLjE3MTY5MDk2OTUuQ0pTVmlPRy1zSVlERmNCdVFRSWRmMklGc2c.*_gcl_au*MTYyOTkwMzcxOS4xNzE4NjkyODI4*_ga*ODAwNDk2NDkzNy4xNzExMTI5MjEy*_ga_3LRZM6TM9L*MTcxODY5NzMyOC4xNi4xLjE3MTg2OTczNDYuMC4wLjA.");
+    height: 500px;
+    width: 1200px;
+    background-position: 0px -100px;
+    display: grid;
+    grid-template-rows: 100px 300px 100px;
+    grid-template-areas: 
+        "head"
+        "list"
+        "foot";
+    gap: 0;
+    justify-content: center;
+}
+
+        /* "locations" text - moved to bottom of grid cell */
+.locations-title{
+    grid-area: head;
+    background-color: transparent;
+    justify-self: center;
+    align-self: end;
+    padding-bottom: 15px;
+}
+        /* each location box is a flex box of text for alignment */
+.location{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 1;
+}
+
+.location-1{
+    grid-area: loc1;
+}
+
+.location-2{
+    grid-area: loc2;
+}
+
+.location-3{
+    grid-area: loc3;
+}
+
+        /* each location box is placed on a grid for size and spacing */
+.locations-grid{
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: 300px;
+    grid-template-areas:
+        "loc1 loc2 loc3";
+    column-gap: 40px;
+    display: grid;
+    justify-content: center;
+    background-color: transparent;
+    grid-area: list;
+    height: 300px;
+}
+
+/* 6 FOOTER SECTION STYLES */
+        
+        /* Contact list in flex-box to align and space evenly */
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+}
+
+        /* footer text */
+.copyright{
+    float: left;
+    margin: 20px;
+}
