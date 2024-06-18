@@ -1,4 +1,4 @@
 # Tea Cozy
-/Codecademy Task
+*Codecademy Task*
 
 See brief folder for wireframe for project
